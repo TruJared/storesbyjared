@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .wrapper <!-- class with no element is same as div.classname -->
+    p.hello hello #{name}! <!-- gets variable name from index.js -->
+    span#fart yo!
+    h2 Hello
+      em  What game are you currently playing?
+
+    - const upGame = currentGame.toUpperCase();
+    p #{upGame}
+
+  .helper-example <!-- Here is an example of using a helper -->
+    p The time is currently #{h.moment().format('h:mm a')}
+    .img
+      img.heart(src="/images/icons/heart.svg" alt="heart image" style="width:20%")
